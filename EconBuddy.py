@@ -61,11 +61,11 @@ def CTF(t, d, i):
     t/=100
     d/=100
     i/=100
-    1 - (t * d * (1 + i / 2)) / ((i + d) * (1 + i))
+    return 1 - (t * d * (1 + i / 2)) / ((i + d) * (1 + i))
 
 def CSF(t, d, i):
     '''Capital Salvage Factor'''
     t/=100
     d/=100
     i/=100
-    1 - (t * d) / (i + d)
+    return 1 - (t * d) / (i + d)
