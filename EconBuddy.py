@@ -69,3 +69,9 @@ def CSF(t, d, i):
     d/=100
     i/=100
     return 1 - (t * d) / (i + d)
+
+def CIIR(ireal, inflat_rate):
+    '''Combined Interest Inflation Rate'''
+    ireal/= 100
+    inflat_rate/=100
+    return (1+ireal)*(1+inflat_rate) - 1 
