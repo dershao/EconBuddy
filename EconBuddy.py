@@ -36,13 +36,16 @@ def FP(i, N):
 
 
 def PAG(i, g, N):
-    '''Geometric Series Present Worth'''
+    '''Geometric Series Present Worth
+    (find PW given i in %, increase in % per year and N years)'''
     i /= 100
+    g /= 100
     return (1 - (1 + g)**N * (1 + i)**(-N)) / (i - g)
 
 
 def AF(i, N):
-    '''Sink Fund Factor'''
+    '''Sink Fund Factor
+    (find annuity given future worth)'''
     i /= 100
     return i / ((1 + i)**N - 1)
 
@@ -71,7 +74,9 @@ def CSF(t, d, i):
     return 1 - (t * d) / (i + d)
 
 def CIIR(ireal, inflat_rate):
-    '''Combined Interest Inflation Rate'''
+    '''Combined Interest Inflation Rate
+    ireal is the minimum required rate-of-return in constant dollars
+    inflate_rate is the inflation factor or rate (f)'''
     ireal/= 100
     inflat_rate/=100
-    return (1+ireal)*(1+inflat_rate) - 1 
+    return (1+ireal)*(1+inflat_rate) - 1
